@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
 const Login = ({ setIsAuthenticated }) => {
-  const adminEmail = 'admin@example.com';
+  const adminEmail = 'melvintorresg@gmail.com';
   const adminPassword = 'qwerty';
 
-  const [email, setEmail] = useState('admin@example.com');
+  const [email, setEmail] = useState('melvintorresg@gmail.com');
   const [password, setPassword] = useState('qwerty');
 
   const handleLogin = e => {
@@ -58,7 +58,7 @@ const Login = ({ setIsAuthenticated }) => {
           id="email"
           type="email"
           name="email"
-          placeholder="admin@example.com"
+          placeholder="melvintorresg@gmail.com"
           value={email}
           onChange={e => setEmail(e.target.value)}
         />

@@ -5,11 +5,11 @@ const Table = ({ employees, handleEdit, handleDelete }) => {
     employee.id = i + 1;
   });
 
-  const formatter = new Intl.NumberFormat('en-US', {
+  /*const formatter = new Intl.NumberFormat('es-GT', {
     style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: null,
-  });
+    currency: 'GTQ', // Moneda de Guatemala (Quetzales - GTQ)
+    minimumFractionDigits: 2, // Por ejemplo, 2 dígitos decimales
+});*/
 
   return (
     <div className="contain-table">
@@ -17,11 +17,11 @@ const Table = ({ employees, handleEdit, handleDelete }) => {
         <thead>
           <tr>
             <th>No.</th>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
             <th>Email</th>
-            <th>Salary</th>
-            <th>Date</th>
+            <th>Telefono</th>
+            <th>Fecha</th>
             <th colSpan={2} className="text-center">
               Actions
             </th>
@@ -35,7 +35,7 @@ const Table = ({ employees, handleEdit, handleDelete }) => {
                 <td>{employee.firstName}</td>
                 <td>{employee.lastName}</td>
                 <td>{employee.email}</td>
-                <td>{formatter.format(employee.salary)}</td>
+                <td>{employee.salary}</td>
                 <td>{employee.date} </td>
                 <td className="text-right">
                   <button
@@ -57,7 +57,7 @@ const Table = ({ employees, handleEdit, handleDelete }) => {
             ))
           ) : (
             <tr>
-              <td colSpan={7}>No Employees</td>
+              <td colSpan={7}>No Empleados</td>
             </tr>
           )}
         </tbody>

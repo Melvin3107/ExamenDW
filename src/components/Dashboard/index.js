@@ -5,6 +5,7 @@ import Header from './Header';
 import Table from './Table';
 import Add from './Add';
 import Edit from './Edit';
+import Delete from './Delete';
 
 import { employeesData } from '../../data';
 
@@ -13,6 +14,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
   const [selectedEmployee, setSelectedEmployee] = useState(null);
   const [isAdding, setIsAdding] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('employees_data'));

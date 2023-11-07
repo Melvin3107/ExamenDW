@@ -54,8 +54,8 @@ const Edit = ({ employees, selectedEmployee, setEmployees, setIsEditing }) => {
   return (
     <div className="small-container">
       <form onSubmit={handleUpdate}>
-        <h1>Edit Employee</h1>
-        <label htmlFor="firstName">First Name</label>
+        <h1>Editar Empleado</h1>
+        <label htmlFor="firstName">Nombre</label>
         <input
           id="firstName"
           type="text"
@@ -63,7 +63,7 @@ const Edit = ({ employees, selectedEmployee, setEmployees, setIsEditing }) => {
           value={firstName}
           onChange={e => setFirstName(e.target.value)}
         />
-        <label htmlFor="lastName">Last Name</label>
+        <label htmlFor="lastName">Apellido</label>
         <input
           id="lastName"
           type="text"
@@ -79,7 +79,7 @@ const Edit = ({ employees, selectedEmployee, setEmployees, setIsEditing }) => {
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
-        <label htmlFor="salary">Salary ($)</label>
+        <label htmlFor="salary">Telefono</label>
         <input
           id="salary"
           type="number"
@@ -87,7 +87,7 @@ const Edit = ({ employees, selectedEmployee, setEmployees, setIsEditing }) => {
           value={salary}
           onChange={e => setSalary(e.target.value)}
         />
-        <label htmlFor="date">Date</label>
+        <label htmlFor="date">Fecha</label>
         <input
           id="date"
           type="date"
